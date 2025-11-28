@@ -1,8 +1,10 @@
 # NestJS Todo Assignment
 
+<p align="left"> <img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" /> <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" /> <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" /> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" /> <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" /> <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" /> </p>
+
 **Simple Todo API** built with NestJS, Prisma (PostgreSQL), JWT authentication and unit tests.
 
-**Tech stack**
+## Tech stack
 
 * Node.js + TypeScript
 * NestJS
@@ -16,25 +18,11 @@
 
 ## Quick status
 
-* ✅ Auth: register, login, profile (JWT)
-* ✅ Todos: create, list (filter by `completed`), get by id, update, delete (per-user)
-* ✅ Swagger UI: `/api`
-* ✅ Prisma migrations applied
-* ✅ Unit tests (todos service): passing
-
----
-
-## Table of contents
-
-* [Prerequisites](#prerequisites)
-* [Setup (local)](#setup-local)
-* [Environment variables](#environment-variables)
-* [Database (Prisma)](#database-prisma)
-* [Scripts](#scripts)
-* [API Endpoints](#api-endpoints)
-* [Example requests (curl)](#example-requests-curl)
-* [Testing](#testing)
-* [What to include in repo/.gitignore](#what-to-include-in-repo--gitignore)
+* Auth: register, login, profile (JWT)
+* Todos: create, list (filter by `completed`), get by id, update, delete (per-user)
+* Swagger UI: `/api`
+* Prisma migrations applied
+* Unit tests (todos service): passing
 
 ---
 
@@ -129,7 +117,7 @@
 
 ## API Endpoints
 
-> All protected endpoints require: `Authorization: Bearer <access_token>`
+All protected endpoints require: `Authorization: Bearer <access_token>`
 
 ### Auth
 
@@ -200,7 +188,7 @@
 ```bash
 curl -X POST http://localhost:3000/auth/register \
   -H "Content-Type: application/json" \
-  -d '{"name":"Dipanjan","email":"dip@example.com","password":"secret123"}'
+  -d '{"name": "Dipanjan", "email": "dip@example.com", "password": "secret123"}'
 ```
 
 2. Login
@@ -217,7 +205,7 @@ curl -X POST http://localhost:3000/auth/login \
 curl -X POST http://localhost:3000/todos \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer TOKEN" \
-  -d '{"title":"Buy milk"}'
+  -d '{"title": "Buy milk"}'
 ```
 
 4. Get todos
@@ -277,3 +265,49 @@ dist/
 ```
 
 ---
+
+## Deployment
+
+When you’re ready to publish this NestJS Todo application to production, a few additional steps will help ensure it runs efficiently and securely. Check out **[NestJS Deployment Guide](https://docs.nestjs.com/deployment)** for detailed guidance on preparing production builds, managing environment variables, optimizing modules, and tuning performance — all of which are useful when deploying this project.
+
+If you prefer a cloud-hosted solution with minimal setup, you can use **Mau**, the official NestJS deployment platform built on AWS. Mau automates most of the infrastructure setup and lets you deploy your application with just a couple of commands.
+
+To deploy using Mau:
+
+```bash
+npm install -g @nestjs/mau
+mau deploy
+```
+With Mau handling provisioning and deployment, you can focus on developing features rather than dealing with servers, DevOps, or cloud configuration.
+
+---
+
+## Resources
+
+Here are useful official documentation links relevant to this project:
+
+**NestJS**: [https://docs.nestjs.com](https://docs.nestjs.com)
+
+**Prisma ORM**: [https://www.prisma.io/docs](https://www.prisma.io/docs)
+
+**PostgreSQL**: [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
+
+**Jest Testing**: [https://jestjs.io/docs/getting-started](https://jestjs.io/docs/getting-started)
+
+**JSON Web Tokens**: [https://jwt.io/introduction](https://jwt.io/introduction)
+
+**Class Validator**: [https://github.com/typestack/class-validator](https://github.com/typestack/class-validator)
+
+**Swagger OpenAPI**: [https://swagger.io/specification/](https://swagger.io/specification/)
+
+---
+
+## Support
+
+Nest is an open source project licensed under MIT, and community support has enabled its continuous development. 
+<br>If you would like to join, then please **[read more](https://docs.nestjs.com/support)**.</br>
+
+## License
+
+Nest is an open source project with an **[MIT license](https://github.com/nestjs/nest/blob/master/LICENSE)**.
+<br>You are free to use, modify, and distribute it as allowed under the license terms.</br>

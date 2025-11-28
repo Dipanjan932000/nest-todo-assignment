@@ -1,0 +1,117 @@
+# -----------------------------------------
+# Node / NestJS / TypeScript
+# -----------------------------------------
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime files
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage reports (Jest)
+coverage/
+
+# Environment variables (DO NOT PUSH)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*
+!.env.example   # allow the example template
+
+# TypeScript compiled files
+*.tsbuildinfo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -----------------------------------------
+# VSCode / IDE settings
+# -----------------------------------------
+
+# VSCode
+.vscode/
+.history/
+
+# JetBrains (WebStorm)
+.idea/
+
+# Misc IDE caches
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------------------------
+# Prisma
+# -----------------------------------------
+
+# Prisma client generation output (auto generated)
+prisma/generated/
+
+# If prisma creates temporary files
+prisma/*.db-journal
+
+# SQLite files (if someone used SQLite locally)
+*.db
+*.sqlite
+*.sqlite3
+
+# -----------------------------------------
+# Jest / Testing
+# -----------------------------------------
+
+# Test cache
+.jest/
+.cache/
+
+# Snapshots (optional — auto regenerated)
+*.snap
+
+# -----------------------------------------
+# Other optional exclusions
+# -----------------------------------------
+
+# GitHub uploads
+*.zip
+*.tar
+*.tgz
+
+# Local environment
+.envrc
+
+# NPM local config
+.npmrc
+
+# Windows specific garbage
+$RECYCLE.BIN/
+
+# macOS specific
+.AppleDouble
+.LSOverride
+
+# Linux trash
+.Trash-*
